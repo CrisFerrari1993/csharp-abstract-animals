@@ -12,32 +12,34 @@ namespace csharp_abstract_animals
             /*
             **Esercizio 1 : classi astratte*
             */
-            List<Animale> animali = new List<Animale>();
-            animali.Add(new Aquila());
-            animali.Add(new Passerotto());
-            animali.Add(new Delfino());
-            animali.Add(new Cane());
-            foreach(Animale animale in animali)
+            List<Animale> animaliLista = new List<Animale>();
+            animaliLista.Add(new Aquila());
+            animaliLista.Add(new Passerotto());
+            animaliLista.Add(new Delfino());
+            animaliLista.Add(new Cane());
+            foreach(Animale animal in animaliLista)
             {
                 Console.WriteLine("/*/*/*/*/*/*/*/*/*/*/*/");
-                animale.IoSono();
-                animale.Verso();
-                animale.Mangia();
-                animale.Dormi();
+                animal.IoSono();
+                animal.Verso();
+                animal.Mangia();
+                animal.Dormi();
             }
             /*
             **Esercizio 2 : interfacce*
             */
-            List<Animale> volatili = new List<Animale>() { new Passerotto(), new Aquila() };
-            foreach(IVolante volante in volatili)
+            List<Animale> animals = new List<Animale>() { new Passerotto(), new Aquila(), new Cane(), new Orca() };
+            foreach(Animale a in animals)
             {
-                FaiVolare(volante);
+                if(a is IVolante)
+                {
+                    FaiVolare((IVolante)a);
+                }  
+                if(a is Inuotante)
+                {
+                    FaiNuotare((Inuotante)a);                }
             }
-            List<Animale> natanti = new List<Animale>() { new Delfino(), new Orca() };
-            foreach (Inuotante natante in natanti)
-            {
-                FaiNuotare(natante);
-            }
+            
         }
         static void FaiVolare(IVolante animale)
         {
