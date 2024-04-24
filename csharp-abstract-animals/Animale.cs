@@ -39,34 +39,34 @@ namespace csharp_abstract_animals
     {
         public override void Mangia()
         {
-            Console.WriteLine($"Sto mangiando carne e crocchette");
+            Console.WriteLine($"sto mangiando carne e crocchette");
         }
         public override void Verso()
         {
-            Console.WriteLine("Bau Bau");
+            Console.WriteLine("bau Bau");
         }
     }
     public class Passerotto : Animale, IVolante
     {
         public override void Mangia()
         {
-            Console.WriteLine("Sto mangiando la semenza");
+            Console.WriteLine("sto mangiando la semenza");
         }
         public override void Verso()
         {
-            Console.WriteLine("Cip Cip");
+            Console.WriteLine("cip Cip");
         }
     }
     public class Aquila : Animale, IVolante
     {
         public override void Mangia()
         {
-            Console.WriteLine("Sto mangiando la carne");
+            Console.WriteLine("sto mangiando la carne");
         }
 
         public override void Verso()
         {
-            Console.WriteLine("Sto stridendo");
+            Console.WriteLine("sto stridendo");
         }
 
     }
@@ -75,11 +75,23 @@ namespace csharp_abstract_animals
 
         public override void Mangia()
         {
-            Console.WriteLine("Sto mangiando il pesce");
+            Console.WriteLine("sto mangiando il pesce");
         }
         public override void Verso()
         {
-            Console.WriteLine("Sto fischettando");
+            Console.WriteLine("sto fischettando");
+        }
+    }
+    public class Orca : Animale, Inuotante
+    {
+
+        public override void Mangia()
+        {
+            Console.WriteLine("sto mangiando il pesce");
+        }
+        public override void Verso()
+        {
+            Console.WriteLine("sto cantando");
         }
     }
 }
