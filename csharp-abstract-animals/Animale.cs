@@ -8,17 +8,11 @@ namespace csharp_abstract_animals
 {
     public interface Inuotante
     {
-        public void Nuota()
-        {
-            Console.WriteLine($"Ciao, sono un {GetType().Name} e sto nuotando!!!");
-        }
+        public void Nuota();
     }
     public interface IVolante
     {
-        public void Vola()
-        {
-            Console.WriteLine($"Ciao, sono un {GetType().Name} e sto volando!!!!");
-        }
+         public void Vola();
     }
     public abstract class Animale
     {
@@ -45,6 +39,10 @@ namespace csharp_abstract_animals
         {
             Console.WriteLine("bau Bau");
         }
+        public void Nuota()
+        {
+            Console.WriteLine("Sto Nuotando");
+        }
     }
     public class Passerotto : Animale, IVolante
     {
@@ -55,6 +53,11 @@ namespace csharp_abstract_animals
         public override void Verso()
         {
             Console.WriteLine("cip Cip");
+        }
+
+        public void Vola()
+        {
+            Console.WriteLine("Sto Volando!");
         }
     }
     public class Aquila : Animale, IVolante
@@ -67,6 +70,10 @@ namespace csharp_abstract_animals
         public override void Verso()
         {
             Console.WriteLine("sto stridendo");
+        }
+        public void Vola()
+        {
+            Console.WriteLine("Sto Volando!");
         }
 
     }
@@ -81,6 +88,10 @@ namespace csharp_abstract_animals
         {
             Console.WriteLine("sto fischettando");
         }
+        public void Nuota()
+        {
+            Console.WriteLine("Sto nuotando");
+        }
     }
     public class Orca : Animale, Inuotante
     {
@@ -92,6 +103,11 @@ namespace csharp_abstract_animals
         public override void Verso()
         {
             Console.WriteLine("sto cantando");
+        }
+
+        public void Nuota()
+        {
+            Console.WriteLine("Sto nuotando");
         }
     }
 }

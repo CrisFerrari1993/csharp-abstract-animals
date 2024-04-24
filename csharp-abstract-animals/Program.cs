@@ -28,12 +28,12 @@ namespace csharp_abstract_animals
             /*
             **Esercizio 2 : interfacce*
             */
-            List<IVolante> volatili = new List<IVolante>() { new Passerotto(), new Aquila() };
+            List<Animale> volatili = new List<Animale>() { new Passerotto(), new Aquila() };
             foreach(IVolante volante in volatili)
             {
                 FaiVolare(volante);
             }
-            List<Inuotante> natanti = new List<Inuotante>() { new Delfino(), new Orca() };
+            List<Animale> natanti = new List<Animale>() { new Delfino(), new Orca() };
             foreach (Inuotante natante in natanti)
             {
                 FaiNuotare(natante);
